@@ -19,18 +19,18 @@ impl Factorial {
         // This loop continues until the user input is not a negative number
         loop {
             input.clear(); // Clears input
-            println!("Enter a non-negative integer: ");
-            io::stdin().read_line(&mut input).expect("Failed to read input"); 
+            println!("Please Enter A Non-negative Integer: ");
+            io::stdin().read_line(&mut input).expect("I Failed To Read Your Input"); 
 
             // Matches the user input with the correct result
             match input.trim().parse::<u32>() {
                 Ok(n) => {
                     let result = self.compute(n);
-                    println!("Factorial of {} is {}", n, result); // This prints the resul, the factorial of the number
+                    println!("The Factorial Of {} Is {}", n, result); // This prints the resul, the factorial of the number
                     break;
                 }
                 Err(_) => {
-                    println!("Invalid input. Please enter a non-negative integer."); // This shows the user the input is incorrect
+                    println!("Invalid Input. Please Enter A Non-negative Integer."); // This shows the user the input is incorrect
                 }
             }
         }

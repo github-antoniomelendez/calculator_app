@@ -18,22 +18,22 @@ fn main() {
     loop {
         println!("\n=== Menu ===");
         println!("1. Basic Calculator");
-        println!("2. Factorial");
-        println!("3. Quit");
-        println!("Enter your choice: ");
+        println!("2. Factorial Calculator");
+        println!("3. Quit The Program");
+        println!("Please Enter Your Choice: ");
 
         input.clear(); // This clears the input and reads a new line
-        io::stdin().read_line(&mut input).expect("Failed to read input");
+        io::stdin().read_line(&mut input).expect("I Failed To Read Your Input");
 
         // This matches the user input according to the user choices
         match input.trim() {
             "1" => calc.calculate(), // This calls the normal calculator module
             "2" => fact.run(), // This calls the factorial calculator module
             "3" => {
-                println!("Goodbye!");
+                println!("Goodbye! Come Back Soon!!");
                 break; // This exits the loop and ends the program
             }
-            _ => println!("Invalid choice. Please enter 1, 2, or 3."), // This handles incorrect user input
+            _ => println!("Invalid choice. Please Enter 1, 2, or 3."), // This handles incorrect user input
         }
     }
 }
